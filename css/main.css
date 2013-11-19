@@ -1,0 +1,587 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*general*/
+body {
+	line-height: 1;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	background:  url(../img/background/slash_it.png) repeat;
+	font-family: "OpenSansRegular", Arial;
+}
+a {
+	text-decoration: none;
+	color: gray;
+}
+p {
+	
+}
+/*fonts*/
+@font-face {
+    font-family: "OpenSansRegular";
+    src:  url(../css/fonts/OpenSans-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "OpenSansBold";
+    src:  url(../css/fonts/OpenSans-Bold.ttf) format("truetype");
+}
+/*index*/
+.topbarcontainer {
+	width: 100%;
+	height: 80px;
+	background:  url(../img/background/subtlenet2.png) repeat;
+}
+	.topbarcontainer .topbar{
+		width: 1000px;
+		height: 60px;
+		margin: 0 auto;
+	}
+		.topbar a{
+			cursor: pointer;
+			margin-top: 25px;
+			float: right;
+			font-size: 12pt;
+			font-family: "OpenSansBold", Arial;
+			margin-left: 20px;
+		}
+		.topbar a:hover{
+			color:#3B83DB;
+		}
+		.topbar img {
+			position: absolute;
+			z-index: 3;
+			margin-left: -20px;
+			margin-top: -8px;
+		}
+	.topbarcontainer .botline{
+		width: 100%;
+		height: 10px;
+		/*background:  url(../img/background/slash_it.png) repeat;*/
+		/*opacity: 0.5;*/
+		background-color: rgba(0,0,0,0.5);
+		border-top: 5px solid rgba(255,255,255,0.5);
+		border-bottom: 5px solid rgba(59,131,219,0.7);
+	}
+.indexcontainer {
+	width: 1000px;
+	margin: 0 auto;
+	padding:0 30px 0 30px;
+	margin-top: 30px;
+}
+.logcontainer {
+	width: 350px;
+	height: 350px;
+	padding-top: 50px;
+}
+	.logcontainer .login {
+		background:  url(../img/background/subtlenet2.png) repeat;
+		position: absolute;
+		width: 340px;
+		height: 300px;
+		z-index: 2;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border: 2px solid black;
+	}
+		.login h2{
+			color: #3B83DB;
+			margin-left: 20px;
+		}
+		.login .formdiv {
+			margin-top: 5px;
+			padding-left: 14px;
+			padding-right: 14px;
+			overflow: hidden;
+		}
+		.login .formdiv p {
+			font-family: "OpenSansRegular", Arial;
+			font-size: 10pt;
+			margin-bottom: 5px;
+			padding-left: 1px;
+		}		
+		.login .formdiv li {
+			font-family: "OpenSansRegular", Arial;
+			font-size: 10pt;
+			margin-bottom: 10px;
+			margin-top: 9px;
+		}	
+			.formdiv .errordiv{
+				font-family: "OpenSansRegular", Arial;
+				color: #633b07;
+				height:15px;
+				padding-top: 3px;
+				padding-left: 2px;
+				font-size: 8pt;
+			}
+			.formdiv .form-text-input {
+				width: 300px;
+				height: 25px;
+				padding-left: 5px;
+			}
+			.formdiv .form-button {
+				border: 1px solid gray;
+				width: 100px;
+				height: 28px;
+				background: #FFFFFF;
+				float: right;
+				
+			}
+				.form-button:hover {
+					border: 1px solid gray;
+					background: #2d2d2d;
+					color:#FFFFFF;
+				}
+			.formdivcolumn {
+				float:left;
+				margin-right: 10px;
+			}
+				.formdivcolumn input[type="checkbox"]{
+					margin-top: 8px;
+				}
+				#logcheckbox, #logpcheckbox {
+					float: right;
+				}
+				
+				#logpcheckbox {
+					margin-top: -5px;
+				}
+				
+	.logcontainer .loginshadow {
+		position: absolute;
+		/*background: rgba(255,255,255,0.3);*/
+		/*background:  url(../img/background/subtlenet2.png) repeat;*/
+		/*opacity: 0.1;*/
+		background-color: #3B83DB;
+		opacity: 0.5;
+		width: 340px;
+		height: 300px;
+		margin: 10px 0 0 10px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+/*main*/
+.midcontainer {
+	width: 1000px;
+	margin: 0 auto;
+	padding:0 30px 30px 30px;
+	margin-bottom: 30px;
+	height: auto;
+	overflow: hidden;
+	background:  url(../img/background/subtlenet2.png) repeat;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 8px 8px 2px rgba(59,131,219,0.5); /* Firefox */  
+	-webkit-box-shadow: 8px 8px 2px rgba(59,131,219,0.5); /* Safari, Chrome */  
+	box-shadow: 8px 8px 2px rgba(59,131,219,0.5); /* CSS3 */
+}
+.toolscontainer {
+	width: 1060px;
+	height: 110px;
+	margin: 0 auto;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	background-color: rgba(59,131,219,0.5);
+	/*padding:0 30px 30px 30px;*/
+	border: 1px solid black;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+	.toolscontainer div.dateinfo {
+		font-size: 16pt;
+		color: white;
+		font-family: "OpenSansBold";
+		overflow:hidden;
+		margin-top: 25px;
+		margin-right: 5px;
+		height: 25px;
+	}
+	.toolscontainer div.userinfo {
+		font-size: 12pt;
+		height: 25px;
+		color: white;
+		overflow:hidden;
+		padding: 5px 5px 0 0 ;
+	}
+	div.userinfo #logout {
+		font-size: 10pt;
+		font-family: "OpenSansBold";
+	}
+		#logout a {
+			color: #FDB42C;
+		}
+		div.userinfo p, div.dateinfo p{
+			float: right;
+			/*padding: 0 0 0 0;*/
+			margin: 0 0 0 0;
+		}
+		
+.daystop{
+	height: 30px;
+	width: 980px;
+	/*background:  url(../img/background/subtlenet2.png) repeat;*/
+	margin: 0 auto;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+	div.daystop div.daycolumn{
+		width: 140px;
+		height: 30px;
+		float: left;
+	}
+		div.daystop p{
+			text-align: center;
+		}
+
+.months {
+	float: left;
+	margin-left: 22px;
+	height: auto;
+	width: 7000px;
+	/*background:  url(../img/background/subtlenet2.png) repeat;*/
+	overflow: hidden;
+}	
+	.months div.days{
+		float:left;
+		height: auto;
+		width: 980px;
+		/*background:  url(../img/background/subtlenet2.png) repeat;*/
+		overflow: hidden;
+		display:none;
+	}
+	.daywrapper {
+		width: 130px;
+		height: 130px;
+		float: left;
+		margin: 3px 3px 3px 3px;
+		position:relative;
+	}
+	
+		div.days div.daycolumn{
+			width: 130px;
+			height: 130px;
+			float: left;
+			border: 1px solid black;
+		}
+			.daycolumn:hover + div {
+				display:block
+			}
+		div.daycolumn .dn{
+			float: right;
+			margin: 3px 3px 3px 3px;
+			color:#3B83DB;
+			font-family: "OpenSansBold";		
+		}
+		div.daycolumn .actcount{
+			margin: 40px 0 0 50px;
+			color: gray;
+			font-family: "OpenSansBold";
+			font-size: 36pt;		
+		}
+		div.daycolumn .actdes{
+			margin-left: 20px;
+			color: gray;
+			font-family: "OpenSansBold";
+			font-size: 12pt;		
+		}
+			
+		.daywrapper .daycolumnbig {
+			display:none;
+			position:absolute;
+			top: -50px;
+			left: -50px;
+			z-index: 2;
+			width:230px;
+			height: 230px;
+			/*background-color:#3B83DB;*/
+			border: 1px solid black;
+			background:  url(../img/background/subtlenet2.png) repeat;
+		}
+		.daycolumnbig .info {
+			overflow: hidden;
+		}
+		.daycolumnbig .info p{
+			float: right;
+			margin: 3px 3px 3px 3px;
+			color:#3B83DB;
+			font-family: "OpenSansBold";
+		}
+		.daycolumnbig .gotoday {
+			margin-top: 20px;
+			overflow: hidden;
+		}
+		.daycolumnbig .gotoday a {
+			margin-left: 60px;
+			/*float: right;*/
+			font-family: "OpenSansBold";
+			font-size: 10pt;
+		}
+		.daycolumnbig .columnwrapper {
+			width: 120px;
+			height: 150px;
+			background-color: rgba(0,0,0,0.1);
+			margin: 0 auto;
+			margin-top: 10px;
+			border-bottom: 1px solid black;
+			border-right: 1px solid black;
+			padding: 0 15px 0 15px;
+		}
+			.columnwrapper .bar{
+				width: 20px;
+				height: 20px;
+				background-color: red;
+				/*margin-right: 30px;*/
+				float: left;
+				margin-top: 125px;
+				
+				-webkit-border-top-left-radius: 9px;
+				-webkit-border-top-right-radius: 9px;
+				-moz-border-radius-topleft: 9px;
+				-moz-border-radius-topright: 9px;
+				border-top-left-radius: 9px;
+				border-top-right-radius: 9px;
+				
+				text-align: center;
+				padding-top: 5px;
+				color: white;
+				font-family: "OpenSansBold";
+			}
+			
+			.columnwrapper #neg {
+				background-color: red;			
+			}
+			.columnwrapper #pos {
+				background-color: green;
+				margin-left: 30px;				
+			}
+			.columnwrapper #und {
+				background-color: gray;	
+				float: right;			
+			}
+			
+			.daycolumnbig:hover {
+				display:block;
+			}
+		.daywrapper > div#topleft{
+			top: 0;
+			left: 0;
+		}
+		.daywrapper > div#topright{
+			top: 0;
+			left: -98px;
+		}
+		.daywrapper > div#botright{
+			top: -98px;
+			left: -98px;
+		}
+		.daywrapper > div#botleft{
+			top: -98px;
+			left: 0;
+		}
+		.daywrapper > div#top{
+			top: 0;
+			left: -50px;
+		}
+		.daywrapper > div#left{
+			top: -50px;
+			left: 0;
+		}
+		.daywrapper > div#right{
+			top: -50px;
+			left: -98px;
+		}
+		.daywrapper > div#bot{
+			top: -98px;
+			left: -50px;
+		}
+		div.days div#empty{
+			/*background:  url(../img/background/slash_it.png) repeat;*/
+			background-color:#3B83DB;
+			opacity: 0.2;
+		}
+	.months div#month_0{
+		display:block;
+	}
+	
+.midcontainer div.monthnav{
+	width: 840px;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+	div.monthnav div.nav{
+		width: 100px;
+		height: 30px;
+		margin: 0 10px 0 10px;
+		float: left;
+		cursor: pointer;
+	}
+		div.monthnav div.nav:hover{
+			opacity: 0.5;
+		}
+	div.monthnav div#current{
+		color:#3B83DB;
+		font-family: "OpenSansBold";
+	}
+
+/*day*/
+.daycontainer {
+	width: 1000px;
+	overflow: hidden;
+	height: auto;
+	margin: 0 auto;
+}
+	.daycontainer .menu{
+		float: left;
+		width: 100px;
+		overflow: hidden;
+		border: 1px solid black;
+		background:  url(../img/background/subtlenet2.png) repeat;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		margin-top: 100px;
+		padding: 5px 5px 5px 5px;
+	}
+	.daycontainer .menu .menuitem{
+		/*color:#3B83DB;*/
+		color: gray;
+		text-align: center;
+		padding: 5px 0 5px 0;
+		font-family: "OpenSansBold";
+		font-size: 10pt;
+		border-bottom: 2px solid gray;
+		cursor: pointer;
+	}
+	.daycontainer .menu .menuitem:hover{
+		background-color:#3B83DB;
+		color: white;
+		border-bottom: 2px solid gray;
+	}
+	.daycontainer .list {
+		float: left;
+		width: 840px;
+		/*height: 600px;*/
+		/*border: 1px solid black;
+		background:  url(../img/background/subtlenet2.png) repeat;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;*/
+		margin-top: 100px;
+		margin-left: 40px;
+	}
+		.list .activityContainer {
+			width: 840px;
+			height: auto;
+			overflow: hidden;
+			margin-bottom: 15px;
+		}
+			.list .activityContainer .activity, .list .activityContainer .note{
+				width: 400px;
+				float: left;
+				padding: 15px 15px 15px 15px;			
+			}
+			.list .activityContainer .note{
+				width: 300px;
+				margin-left: 40px;
+				background-color: white;
+			}
+			.list .activityContainer .activity{
+				border: 1px solid black;
+				background:  url(../img/background/subtlenet2.png) repeat;
+				-webkit-border-radius: 15px;
+				-moz-border-radius: 15px;
+				border-radius: 15px;
+				-webkit-box-shadow: 8px 8px 2px rgba(59,131,219,0.5);
+				box-shadow: 8px 8px 2px rgba(59,131,219,0.5);
+				margin-bottom: 15px;
+			}
+			.list .activityContainer .activity .actmenu {
+				overflow: hidden;
+				margin-top: 10px;
+				margin-right: 10px;
+			}
+				.list .activityContainer .activity .actmenu  p{
+					float: right;
+					font-family: "OpenSansBold";
+					font-size: 10pt;
+					color: gray;
+					margin-left: 5px;
+					cursor: pointer; 
+				}
+				.list .activityContainer .activity .actmenu  p:hover {
+					color: #3B83DB;
+				}
+				
+			.list .activityContainer .activity .actTop {
+				overflow: hidden;
+				margin-bottom: 30px;
+			}
+				.list .activityContainer .activity .actTop .title{
+					font-family: "OpenSansBold";
+					width: 300px;
+					margin-right: 20px;
+					font-size: 16pt;
+					color: gray;
+					float:left;
+				}
+				.list .activityContainer .activity .actTop .time{
+					font-family: "OpenSansBold";
+					width: 70px;
+					text-align: right;
+					font-size: 16pt;
+					color: #3B83DB;
+					float: left;
+				}
+			
