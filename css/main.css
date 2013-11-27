@@ -28,8 +28,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+	height: 100%;
+}
 body {
 	line-height: 1;
+	height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -62,6 +66,10 @@ a {
 }
 p {
 	
+}
+h2 {
+	font-size: 16pt;
+	padding: 10px 5px 10px 0px;
 }
 /*fonts*/
 @font-face {
@@ -110,21 +118,33 @@ p {
 		border-bottom: 5px solid rgba(59,131,219,0.7);
 	}
 .indexcontainer {
+	overflow: hidden;
 	width: 1000px;
 	margin: 0 auto;
 	padding:0 30px 0 30px;
 	margin-top: 30px;
+	height: 100%
 }
 .logcontainer {
 	width: 350px;
-	height: 350px;
-	padding-top: 50px;
+	height: 245px;
+	padding-top: 60px;
+	float: left;
+}
+
+.regcontainer {
+	width: 350px;
+	height: 320px;
+	padding-top: 60px;
+	float: left;
+	margin-left: 300px;
 }
 	.logcontainer .login {
+		/*padding-top: 10px;*/
 		background:  url(../img/background/subtlenet2.png) repeat;
 		position: absolute;
 		width: 340px;
-		height: 300px;
+		height: 235px;
 		z-index: 2;
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
@@ -133,21 +153,22 @@ p {
 	}
 		.login h2{
 			color: #3B83DB;
-			margin-left: 20px;
+			font-family: "OpenSansBold";
+			margin-left: 10px;
 		}
-		.login .formdiv {
+		.formdiv {
 			margin-top: 5px;
 			padding-left: 14px;
 			padding-right: 14px;
 			overflow: hidden;
 		}
-		.login .formdiv p {
+		.formdiv p {
 			font-family: "OpenSansRegular", Arial;
 			font-size: 10pt;
 			margin-bottom: 5px;
 			padding-left: 1px;
 		}		
-		.login .formdiv li {
+		.formdiv li {
 			font-family: "OpenSansRegular", Arial;
 			font-size: 10pt;
 			margin-bottom: 10px;
@@ -189,6 +210,9 @@ p {
 				#logcheckbox, #logpcheckbox {
 					float: right;
 				}
+				#logpcheckbox p{
+					margin-top: 15px;
+				}
 				
 				#logpcheckbox {
 					margin-top: -5px;
@@ -202,12 +226,57 @@ p {
 		background-color: #3B83DB;
 		opacity: 0.5;
 		width: 340px;
-		height: 300px;
+		height: 235px;
 		margin: 10px 0 0 10px;
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
 		border-radius: 5px;
 	}
+	
+	
+.regcontainer .register {
+		/*padding-top: 10px;*/
+		background:  url(../img/background/subtlenet2.png) repeat;
+		position: absolute;
+		width: 340px;
+		height: 310px;
+		z-index: 2;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border: 2px solid black;
+	}
+		.register h2{
+			color: #3B83DB;
+			margin-left: 10px;
+			font-family: "OpenSansBold";
+		}
+				#regcheckbox, #regpcheckbox {
+					float: right;
+				}
+				#regpcheckbox p{
+					margin-top: 15px;
+				}
+				
+				#regpcheckbox {
+					margin-top: -5px;
+				}
+				
+	.regcontainer .registershadow {
+		position: absolute;
+		/*background: rgba(255,255,255,0.3);*/
+		/*background:  url(../img/background/subtlenet2.png) repeat;*/
+		/*opacity: 0.1;*/
+		background-color: #3B83DB;
+		opacity: 0.5;
+		width: 340px;
+		height: 310px;
+		margin: 10px 0 0 10px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
 /*main*/
 .midcontainer {
 	width: 1000px;
@@ -240,7 +309,7 @@ p {
 	.toolscontainer div.dateinfo {
 		font-size: 16pt;
 		color: white;
-		font-family: "OpenSansBold";
+		font-family: "OpenSansRegular";
 		overflow:hidden;
 		margin-top: 25px;
 		margin-right: 5px;
@@ -477,31 +546,37 @@ p {
 
 /*day*/
 .daycontainer {
-	width: 1000px;
+	width: 1060px;
 	overflow: hidden;
 	height: auto;
 	margin: 0 auto;
+	margin-bottom: 50px;
+	background-color: rgba(59,131,219,0.05);
 }
 	.daycontainer .menu{
 		float: left;
 		width: 100px;
+		height: 100px;
 		overflow: hidden;
 		border: 1px solid black;
 		background:  url(../img/background/subtlenet2.png) repeat;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+		border: 2px solid rgba(59,131,219,1);
 		margin-top: 100px;
-		padding: 5px 5px 5px 5px;
+		/*padding: 5px 5px 5px 5px;*/
 	}
 	.daycontainer .menu .menuitem{
 		/*color:#3B83DB;*/
+		margin-top: 35px;
 		color: gray;
 		text-align: center;
 		padding: 5px 0 5px 0;
 		font-family: "OpenSansBold";
 		font-size: 10pt;
 		border-bottom: 2px solid gray;
+		border-top: 2px solid gray;
 		cursor: pointer;
 	}
 	.daycontainer .menu .menuitem:hover{
@@ -522,22 +597,22 @@ p {
 		margin-left: 40px;
 	}
 		.list .activityContainer {
-			width: 840px;
+			width: 900px;
 			height: auto;
 			overflow: hidden;
 			margin-bottom: 15px;
 		}
-			.list .activityContainer .activity, .list .activityContainer .note{
+			.activity, .list .activityContainer .note, .list .activityContainer .activity_red, .list .activityContainer .activity_green{
 				width: 400px;
 				float: left;
 				padding: 15px 15px 15px 15px;			
 			}
 			.list .activityContainer .note{
 				width: 300px;
-				margin-left: 40px;
+				margin-left: 138px;
 				background-color: white;
 			}
-			.list .activityContainer .activity{
+			.activity{
 				border: 1px solid black;
 				background:  url(../img/background/subtlenet2.png) repeat;
 				-webkit-border-radius: 15px;
@@ -547,12 +622,32 @@ p {
 				box-shadow: 8px 8px 2px rgba(59,131,219,0.5);
 				margin-bottom: 15px;
 			}
-			.list .activityContainer .activity .actmenu {
+			.list .activityContainer .activity_red{
+				border: 1px solid black;
+				background:  url(../img/background/subtlenet2.png) repeat;
+				-webkit-border-radius: 15px;
+				-moz-border-radius: 15px;
+				border-radius: 15px;
+				-webkit-box-shadow: 8px 8px 2px rgba(189,54,46,0.5);
+				box-shadow: 8px 8px 2px rgba(189,54,46,0.5);
+				margin-bottom: 15px;
+			}
+			.list .activityContainer .activity_green{
+				border: 1px solid black;
+				background:  url(../img/background/subtlenet2.png) repeat;
+				-webkit-border-radius: 15px;
+				-moz-border-radius: 15px;
+				border-radius: 15px;
+				-webkit-box-shadow: 8px 8px 2px rgba(59, 175, 127, 0.5);
+				box-shadow: 8px 8px 2px rgba(59, 175, 127, 0.5);
+				margin-bottom: 15px;
+			}
+			.activity .actmenu, .list .activityContainer .activity_red .actmenu, .list .activityContainer .activity_green .actmenu {
 				overflow: hidden;
 				margin-top: 10px;
 				margin-right: 10px;
 			}
-				.list .activityContainer .activity .actmenu  p{
+				.actmenu  p{
 					float: right;
 					font-family: "OpenSansBold";
 					font-size: 10pt;
@@ -560,23 +655,23 @@ p {
 					margin-left: 5px;
 					cursor: pointer; 
 				}
-				.list .activityContainer .activity .actmenu  p:hover {
-					color: #3B83DB;
-				}
+					.actmenu  p:hover {
+						color: #3B83DB;
+					}
 				
-			.list .activityContainer .activity .actTop {
+			.list .activityContainer .actTop {
 				overflow: hidden;
 				margin-bottom: 30px;
 			}
-				.list .activityContainer .activity .actTop .title{
+				.actTop .title{
 					font-family: "OpenSansBold";
 					width: 300px;
-					margin-right: 20px;
+					margin-right: 25px;
 					font-size: 16pt;
 					color: gray;
 					float:left;
 				}
-				.list .activityContainer .activity .actTop .time{
+				.actTop .time{
 					font-family: "OpenSansBold";
 					width: 70px;
 					text-align: right;
@@ -584,4 +679,86 @@ p {
 					color: #3B83DB;
 					float: left;
 				}
-			
+				.actTop input[type="text"] {
+					/*font-family: "OpenSansBold";*/
+					width: inherit;
+					outline: 0;
+					border-top: none;
+					border-right: none;
+					border-bottom: 1px solid black;
+					border-left: none;
+					background-color: rgba(0,0,0,0.1);
+					padding-top: 3px;
+					padding-bottom: 3px;
+					margin-bottom: 10px;
+					padding-left: 5px;
+					text-align: center;
+				}
+#activityNew {
+	position: fixed;
+	z-index: 3;
+	margin-left: 480px;
+	display:none;
+}
+#activityNewBg {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.25);
+	top: 0;
+	left: 0;
+	display: none;
+}
+textarea[name=newDesc] {
+    resize: none;
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+    font-family: "OpenSansRegular";
+    font-size: 10pt;
+}
+	#activityNew .addActp {
+		color: #3B83DB;
+		font-size: 8pt;
+		text-align: center;
+		font-family: "OpenSansBold";
+		margin-bottom: 3px;
+	}
+	#activityNew .valid {
+		border-color: green;
+	}
+	#activityNew .error {
+		border-color: red;
+	}
+#daytools {
+	background-color: rgba(59,131,219,0.1);
+}
+
+/*FOOTER*/
+.footercontainer {
+	position:relative;
+    min-height: 50px;
+	height: auto !important;
+	height: 50px;
+	margin: 0 auto;
+	z-index: 3;
+	background:  url(../img/background/subtlenet2.png) repeat;
+}
+.footercontainer .footer {
+	width: 1000px;
+	margin: 0 auto;
+	border-bottom: -5px;
+	padding-top: 14px;
+	text-align:center;
+}
+.footercontainer .border-div {
+    position: absolute;
+    top: -8px;
+    left: -3px;
+    bottom: 0px;
+    right: -3px;
+   border-top: 8px solid rgba(59,131,219,0.5);
+
+}

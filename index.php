@@ -60,12 +60,47 @@
 				
 			</div>
 		</div>
+		<div class="regcontainer">
+			<form method="post" id="regform">
+			<div class="register">
+				<h2>Rejestracja</h2>
+				<div class ="formdiv">
+						<p>Adres email</p>
+						<input type='text' class="form-text-input" id="emailinput" name="emailinput"/>
+						<div class="errordiv" id="emailinput_label"></div>						
+				</div>
+				<div class ="formdiv">
+						<p>Hasło</p>
+						<input type='password' class="form-text-input" id="passinput" name="passinput"/>
+						<div class="errordiv" id="passinput_label"></div>						
+				</div>
+				<div class ="formdiv">
+						<p>Powtórz hasło</p>
+						<input type='password' class="form-text-input" id="passinput2" name="passinput2"/>
+						<div class="errordiv" id="passinput2_label"></div>						
+				</div>
+				<div class ="formdiv">
+						<div class ="formdivcolumn">
+							<input class="form-button" type="submit" value="Zarejestruj sie" />
+						</div>
+				</div>
+			</div>
+			</form>
+			<div class="registershadow">
+				
+			</div>
+		</div>
 	</div>
+	<?php include('include/footer.php');?>
 </body>
 </html>
 <script>
-$('#emailinput').watermark("Wpisz swój adres email");
-$('#passinput').watermark("Wpisz swoje hasło");
+$('.login #emailinput').watermark("Wpisz swój adres email");
+$('.login #passinput').watermark("Wpisz swoje hasło");
+
+$('.register #emailinput').watermark("Wpisz swój adres email");
+$('.register #passinput').watermark("Wpisz swoje hasło");
+$('.register #passinput2').watermark("Powtórz swoje hasło");
 
 jQuery.validator.addMethod("customEmail", function(value, element) {
         return this.optional(element) || value.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/);
